@@ -15,6 +15,7 @@ namespace AlmostTwitter
     public class Adapterlist : BaseAdapter<Holder>
     {
         public List<Holder> holders;
+
         Activity context;
 
         public Adapterlist(Activity context, List<Holder> items)
@@ -22,13 +23,19 @@ namespace AlmostTwitter
             this.context = context;
             this.holders = items;
         }
+        
+        
 
         public override Holder this[int position]
         {
             get { return holders[position]; }
         }
 
+       
+
         public override int Count { get { return holders.Count; } }
+
+        
 
         public override long GetItemId(int position)
         {
@@ -46,6 +53,7 @@ namespace AlmostTwitter
             view.FindViewById<TextView>(Resource.Id.messagetext).Text = holders[position].Message;
             int ideksdee = (int)typeof(Resource.Drawable).GetField(holders[position].itbe).GetValue(null);
             view.FindViewById<ImageView>(Resource.Id.Profpic).SetImageResource(ideksdee);
+
             return view;
         }
     }

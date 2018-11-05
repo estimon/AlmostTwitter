@@ -2729,6 +2729,9 @@ namespace AlmostTwitter
 			// aapt resource value: 0x7F020011
 			public const int textView1 = 2130837521;
 			
+			// aapt resource value: 0x7F020014
+			public const int textView2 = 2130837524;
+			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
 			
@@ -2920,6 +2923,12 @@ namespace AlmostTwitter
 			// aapt resource value: 0x7F030002
 			public const int activity_main = 2130903042;
 			
+			// aapt resource value: 0x7F030003
+			public const int commentlist = 2130903043;
+			
+			// aapt resource value: 0x7F030004
+			public const int commentpreset = 2130903044;
+			
 			// aapt resource value: 0x7F0F001B
 			public const int design_bottom_navigation_item = 2131689499;
 			
@@ -2962,8 +2971,8 @@ namespace AlmostTwitter
 			// aapt resource value: 0x7F0F0028
 			public const int design_text_input_password_icon = 2131689512;
 			
-			// aapt resource value: 0x7F030003
-			public const int list = 2130903043;
+			// aapt resource value: 0x7F030005
+			public const int list = 2130903045;
 			
 			// aapt resource value: 0x7F0F0001
 			public const int notification_action = 2131689473;

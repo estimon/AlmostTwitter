@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\Documents\\GitHub\\Twitter-like-app\\AlmostTwitter\\AlmostTwitter\\AlmostTwitter.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\Desktop\\New folder (3)\\AlmostTwitter\\AlmostTwitter.csproj",
       "projectName": "AlmostTwitter",
-      "projectPath": "C:\\Users\\opilane\\Documents\\GitHub\\Twitter-like-app\\AlmostTwitter\\AlmostTwitter\\AlmostTwitter.csproj",
+      "projectPath": "C:\\Users\\opilane\\Desktop\\New folder (3)\\AlmostTwitter\\AlmostTwitter.csproj",
       "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\Documents\\GitHub\\Twitter-like-app\\AlmostTwitter\\AlmostTwitter\\obj\\",
+      "outputPath": "C:\\Users\\opilane\\Desktop\\New folder (3)\\AlmostTwitter\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
