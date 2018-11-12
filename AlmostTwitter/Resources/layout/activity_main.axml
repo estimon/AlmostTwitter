@@ -72,11 +72,13 @@
 				android:layout_height="45.5dp"
 				android:id="@+id/button1" />
 			<TextView
-				android:text="Small Text"
+				android:text="like"
 				android:textAppearance="?android:attr/textAppearanceSmall"
-				android:layout_width="44.5dp"
-				android:layout_height="18.0dp"
-				android:id="@+id/textView1" />
+				android:layout_width="45.5dp"
+				android:layout_height="27.5dp"
+				android:id="@+id/textView1"
+				android:layout_marginTop="0.0dp"
+				android:layout_marginBottom="0.0dp" />
 			<Button
 				android:text="comment"
 				android:layout_width="99.5dp"

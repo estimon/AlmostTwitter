@@ -5,8 +5,6 @@ using Android.Runtime;
 using Android.Widget;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.Content;
 
 namespace AlmostTwitter
@@ -24,7 +22,7 @@ namespace AlmostTwitter
             var likebtn = FindViewById<Button>(Resource.Id.button1);
             var commentbtn = FindViewById<Button>(Resource.Id.button2);
 
-            commentbtn.Click += Button_Click; 
+            
 
             var listholder = new List<Holder>();
             
@@ -73,11 +71,6 @@ namespace AlmostTwitter
         
         }
 
-        private void Button_Click(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            var lmao = new Intent(this, typeof(comadapter));
-            things.comments = listholder[e.Position].Comments;
-            StartActivity(commentlist);
-        }
+        
     }
 }
