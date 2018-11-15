@@ -18,8 +18,17 @@ namespace AlmostTwitter
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.commentlist);
 
-            // Create your application here
+            var comlistholder = new List<comments>();
+
+
+            comments Jeff = new comments
+            {
+                ComName = "Jeff",
+                Comment = "Very nice"
+            };
+          
         }
     }
 }

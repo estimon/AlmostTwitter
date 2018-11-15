@@ -19,6 +19,7 @@ namespace AlmostTwitter
         public string Date { get; set; }
         public string Message { get; set; }
         public string itbe { get; set; }
+        public int Like { get; set; }
         public List<comments> PostComment { get; set; }
     }
 }

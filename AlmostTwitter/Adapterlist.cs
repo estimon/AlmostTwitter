@@ -53,26 +53,35 @@ namespace AlmostTwitter
             view.FindViewById<TextView>(Resource.Id.messagetext).Text = holders[position].Message;
             int ideksdee = (int)typeof(Resource.Drawable).GetField(holders[position].itbe).GetValue(null);
             view.FindViewById<ImageView>(Resource.Id.Profpic).SetImageResource(ideksdee);
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = holders[position].Like.ToString();
+            
+            
 
             var clickLikeButton = view.FindViewById<Button>(Resource.Id.button1);
             clickLikeButton.Tag = position;
             clickLikeButton.Click -= Button_Click;
             clickLikeButton.Click += Button_Click;
 
+            var combutton = view.FindViewById<Button>(Resource.Id.button2);
+            combutton.Click += Button_Click1;
 
-            void Button_Click(object sender, EventArgs e)
-            {
-                var LikeButton = (Button)sender;
-                int position = (int)LikeButton.Tag;
-
-                items[position].clickLikeButton--;
-                items[position].clickLikeButton++;
-
-                MainActivity.
-
-            }
 
             return view;
+        }
+        void Button_Click(object sender, EventArgs e)
+        {
+            var LikeButton = (Button)sender;
+            int position = (int)LikeButton.Tag;
+
+            holders[position].Like++;
+            NotifyDataSetChanged();
+
+
+        }
+
+        private void Button_Click1(object sender, System.EventArgs e)
+        {
+            var comButton = (Button)sender;
         }
     }
 }

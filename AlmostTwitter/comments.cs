@@ -16,5 +16,6 @@ namespace AlmostTwitter
     {
         public string ComName {get; set;}
         public string Comment { get; set; }
+        public int Like { get; set; }
     }
 }

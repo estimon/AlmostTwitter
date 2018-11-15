@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace AlmostTwitter
 {
-    class things
+    class Things
     {
         public static List<comments> comments { get; set; }
     }
