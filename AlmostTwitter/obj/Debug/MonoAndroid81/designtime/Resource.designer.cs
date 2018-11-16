@@ -2257,6 +2257,9 @@ namespace AlmostTwitter
 			// aapt resource value: 0x7F010004
 			public const int kUuht00m_400x400 = 2130771972;
 			
+			// aapt resource value: 0x7F010005
+			public const int MIN_172701_SWA = 2130771973;
+			
 			// aapt resource value: 0x7F09005C
 			public const int navigation_empty_icon = 2131296348;
 			
@@ -2378,6 +2381,9 @@ namespace AlmostTwitter
 			// aapt resource value: 0x7F0C0015
 			public const int add = 2131492885;
 			
+			// aapt resource value: 0x7F020015
+			public const int addnewpostbtn = 2130837525;
+			
 			// aapt resource value: 0x7F0C0016
 			public const int alertTitle = 2131492886;
 			
@@ -2413,6 +2419,9 @@ namespace AlmostTwitter
 			
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
+			
+			// aapt resource value: 0x7F020013
+			public const int commlist1 = 2130837523;
 			
 			// aapt resource value: 0x7F0C0020
 			public const int container = 2131492896;
@@ -2528,8 +2537,8 @@ namespace AlmostTwitter
 			// aapt resource value: 0x7F0C0040
 			public const int listMode = 2131492928;
 			
-			// aapt resource value: 0x7F020013
-			public const int listView1 = 2130837523;
+			// aapt resource value: 0x7F020017
+			public const int listView1 = 2130837527;
 			
 			// aapt resource value: 0x7F0C0041
 			public const int list_item = 2131492929;
@@ -2713,6 +2722,9 @@ namespace AlmostTwitter
 			
 			// aapt resource value: 0x7F0C0018
 			public const int text2 = 2131492888;
+			
+			// aapt resource value: 0x7F020016
+			public const int textInputEditText1 = 2130837526;
 			
 			// aapt resource value: 0x7F0C007E
 			public const int textinput_counter = 2131492990;

@@ -57,14 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapterlist.cs" />
-    <Compile Include="comac.cs" />
-    <Compile Include="comadapter.cs" />
-    <Compile Include="comments.cs" />
-    <Compile Include="Holder.cs" />
+    <Compile Include="commentactivity.cs" />
+    <Compile Include="CommentAdapter.cs" />
+    <Compile Include="CommentItems.cs" />
+    <Compile Include="PostItems.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="things.cs" />
+    <Compile Include="GetComments.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -123,6 +123,9 @@
     <AndroidResource Include="Resources\layout\commentpreset.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\MIN_172701_SWA.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

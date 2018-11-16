@@ -12,30 +12,30 @@ using Android.Widget;
 
 namespace AlmostTwitter
 {
-    public class Adapterlist : BaseAdapter<Holder>
+    public class Adapterlist : BaseAdapter<PostItems>
     {
-        public List<Holder> holders;
+        public List<PostItems> items;
 
         Activity context;
 
-        public Adapterlist(Activity context, List<Holder> items)
+        public Adapterlist(Activity context, List<PostItems> items)
         {
             this.context = context;
-            this.holders = items;
+            this.items = items;
         }
-        
-        
 
-        public override Holder this[int position]
+
+
+        public override PostItems this[int position]
         {
-            get { return holders[position]; }
+            get { return items[position]; }
         }
 
-       
 
-        public override int Count { get { return holders.Count; } }
 
-        
+        public override int Count { get { return items.Count; } }
+
+
 
         public override long GetItemId(int position)
         {
@@ -48,14 +48,14 @@ namespace AlmostTwitter
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.activity_main, null);
 
-            view.FindViewById<TextView>(Resource.Id.Nametext).Text = holders[position].Name;
-            view.FindViewById<TextView>(Resource.Id.datetext).Text = holders[position].Date;
-            view.FindViewById<TextView>(Resource.Id.messagetext).Text = holders[position].Message;
-            int ideksdee = (int)typeof(Resource.Drawable).GetField(holders[position].itbe).GetValue(null);
-            view.FindViewById<ImageView>(Resource.Id.Profpic).SetImageResource(ideksdee);
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = holders[position].Like.ToString();
-            
-            
+            view.FindViewById<TextView>(Resource.Id.Nametext).Text = items[position].Name;
+            view.FindViewById<TextView>(Resource.Id.datetext).Text = items[position].Date;
+            view.FindViewById<TextView>(Resource.Id.messagetext).Text = items[position].Message;
+            int img = (int)typeof(Resource.Drawable).GetField(items[position].ProfilePic).GetValue(null);
+            view.FindViewById<ImageView>(Resource.Id.Profpic).SetImageResource(img);
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Like.ToString();
+
+
 
             var clickLikeButton = view.FindViewById<Button>(Resource.Id.button1);
             clickLikeButton.Tag = position;
@@ -64,6 +64,7 @@ namespace AlmostTwitter
 
             var combutton = view.FindViewById<Button>(Resource.Id.button2);
             combutton.Click += Button_Click1;
+            combutton.Tag = position;
 
 
             return view;
@@ -73,15 +74,22 @@ namespace AlmostTwitter
             var LikeButton = (Button)sender;
             int position = (int)LikeButton.Tag;
 
-            holders[position].Like++;
+            items[position].Like++;
             NotifyDataSetChanged();
 
 
         }
 
-        private void Button_Click1(object sender, System.EventArgs e)
+
+        void Button_Click1(object sender, EventArgs e)
         {
-            var comButton = (Button)sender;
+            var commbtn = (Button)sender;
+            int position = (int)commbtn.Tag;
+            Things.comments = items[position].PostComment;
+            context.StartActivity(typeof(commentactivity));
+
         }
+
+
     }
 }

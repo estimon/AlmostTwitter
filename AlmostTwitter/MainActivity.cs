@@ -12,6 +12,8 @@ namespace AlmostTwitter
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        public List<PostItems> listholder;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -24,31 +26,40 @@ namespace AlmostTwitter
 
             
 
-            var listholder = new List<Holder>();
+            listholder = new List<PostItems>();
             
-            Holder Elon = new Holder
+            PostItems Elon = new PostItems
             {
                 Name = "Elon Musk",
                 Date = DateTime.Today.ToString(),
-                Message = "Libtard destoryed with facts and knowledge",
-                itbe = "Elon_Musk_2015"
+                Message = "I'm Elon Musk",
+                ProfilePic = "Elon_Musk_2015",
+
+                PostComment = new List<CommentItems>
+                {
+                    new CommentItems
+                    {
+                        ComName = "Ben Shapiro",
+                        Comment = "YES"
+                    }
+                }
             };
             listholder.Add(Elon);
 
 
-            Holder Trupm = new Holder
+            PostItems Trupm = new PostItems
             {
                 Name = "Trump",
                 Date = DateTime.Today.ToString(),
                 Message = "Thank you Kanye very cool",
-                itbe = "kUuht00m_400x400",
+                ProfilePic = "kUuht00m_400x400",
 
-                PostComment = new List<comments>
+                PostComment = new List<CommentItems>
                 {
-                    new comments
+                    new CommentItems
                     {
-                        ComName = "Troy",
-                        Comment = "ur mom gay lmao"
+                        ComName = "Kanye",
+                        Comment = "My phone password is 0000"
                     }
                 }
 
@@ -57,21 +68,53 @@ namespace AlmostTwitter
             
             listholder.Add(Trupm);
 
-            Holder deepnigga= new Holder
+            PostItems WisePerson= new PostItems
             {
-                Name = "Wise Nigga",
+                Name = "Wise person",
                 Date = DateTime.Today.ToString(),
                 Message = "It be like that sometimes",
-                itbe = "Capture"
+                ProfilePic = "Capture",
+
+                PostComment = new List<CommentItems>
+                {
+                    new CommentItems
+                    {
+                        ComName = "Wise person number 2",
+                        Comment = "it do"
+                    }
+                }
             };
-            listholder.Add(deepnigga);
+            listholder.Add(WisePerson);
 
 
             list1.Adapter = new Adapterlist(this, listholder);
-        
+
+            var AddNewPost = FindViewById<Button>(Resource.Id.addnewpostbtn);
+            AddNewPost.Click += Button_Click;
+
         }
 
-       
+        private void Button_Click(object sender, EventArgs e)
+        {
+            
+            var listView = FindViewById<ListView>(Resource.Id.listView1);
+            string Addpost = FindViewById<EditText>(Resource.Id.textInputEditText1).Text;
+            PostItems User = new PostItems
+            {
+                Name = "User",
+                Date = DateTime.Today.ToString(),
+                Message = Addpost,
+                ProfilePic = "MIN_172701_SWA",
+
+                PostComment = new List<CommentItems>()
+               
+            };
+
+            listholder.Add(User);
+            listView.Adapter = new Adapterlist(this, listholder);
+
+           
+        }
 
 
 
